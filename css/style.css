@@ -1,0 +1,466 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: 'Montserrat';
+}
+body{
+    margin: 0 auto;
+}
+/* entete de page */
+header.header{
+    display: flex;
+    align-items: center;
+}
+header.header img{
+    width: 150px;
+}
+section.top-page{ 
+    background: url('../images/bg.jpg');
+    height: 80vh;
+    background-size: cover;
+    padding: 25px;
+}
+/* page de bienvenue (landing page) */
+.landing-page{
+    padding: 2Opx 50px;
+    margin-left:50px;
+}
+.big-title{
+    color: white;
+    font-size: 80px;
+    font-family: 'Abril FatFace' ;
+    font-weight: 100;
+}
+.scroll-down{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 100px;
+}
+/* menu de navigatiion  */
+nav.nav{
+    display: flex; 
+    list-style: none;
+    justify-content: space-between;
+    width: 500px;
+    margin-left:30px;
+}
+nav.nav li {
+  margin: 10px;
+  overflow: hidden;
+}
+
+nav.nav a{
+    color: yellow;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    transition: transform 0.4s;
+}
+nav.nav a:hover{
+    transform: translateY(-100%);
+}
+nav.nav a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+}
+.burger {
+    display: none;
+    color: yellow;
+}
+
+/* services */
+.services{
+    display:flex;
+    justify-content: space-evenly;
+    margin:50px;
+}
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.service-details{
+    font-weight:600;
+    width: 200px;
+    text-align: center;
+}
+.delivery-icon{
+    font-size: 30px;
+    color:#ADD981;
+}
+/* best sells */
+.section-title{
+    font-size: 50px;
+    font-family: 'Abril FatFace';
+    font-weight:100;
+    position: relative;
+}
+.section-title::before{
+    content: "";
+    position: absolute;
+    background-color:#ADD981 ;
+    width:50px;
+    height: 7px;
+    bottom: 0;
+}
+.best-items{
+    margin:100px;
+}
+.best-plants{
+     background-color: red;
+     min-height: 500px;
+     display: flex;
+     flex-wrap: wrap;
+}
+.plant-box{
+    position: relative;
+    background-size:cover;
+    background-position: center;
+}
+.plant1{
+    background-image: url("../images/nos_meilleures_ventes/1.jpg");
+    
+}
+.plant2{
+    background-image: url("../images/nos_meilleures_ventes/2.jpg");
+    
+}
+.plant3{
+    background-image: url("../images/nos_meilleures_ventes/3.jpg");
+
+}
+.plant4{
+    background-image: url("../images/nos_meilleures_ventes/4.jpg");
+
+}
+.plant-details{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    background-color: #FFFFFFDF;
+    padding: 5px 20px;
+
+}
+.plant-name{
+    font-size:22px;
+    font-weight:600;
+    line-height: 3px;
+}
+.plant-price{
+    color:#ADD981;
+    font-weight: 800;
+    line-height: 3px;
+    font-size:14px;
+
+}
+
+.no-grid{
+    /* min-width: 350px;
+    height: 500px; */
+    flex: 1;
+} 
+/* Nos Produits */
+.all-plants{
+    margin: 100px;
+}
+.plant-grid{
+    display:grid;
+    min-height:150vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,400px);
+}
+.plant-grid1{
+    background-image: url("../images/nos_plantes/1.jpg");
+    grid-column: 1/3;
+    grid-row:1/3;
+}
+.plant-grid2{
+    background-image: url("../images/nos_plantes/2.jpg");
+    grid-column: 3/5;
+}
+.plant-grid3{
+    background-image: url("../images/nos_plantes/3.jpg");
+    grid-column: 3/5;
+}
+.plant-grid4{
+    margin-top: 10%;
+    background-image: url("../images/nos_plantes/Art-Dakar-Mere-et-fille-300x300.png");
+    grid-column: 1;
+    grid-row: 3/5;
+}
+.plant-grid5{
+    margin-top: 10%;
+    background-image: url("../images/nos_plantes/5.jpg");
+    grid-column:2/4;
+    grid-row: 3/5;
+}
+.plant-grid6{
+    margin-top: 10%;
+    background-image: url("../images/nos_plantes/6.jpg");
+    grid-column: 4;
+    grid-row: 3/5;
+}
+
+/* soldes */
+.soldes{
+    margin: 100px;
+}
+.plant-price_solde{
+    color:black;
+    font-weight: 300;
+    text-decoration: line-through red;
+
+}
+.plant-price-new{
+    color: red;
+    font-weight: 800;
+}
+.plant-boxsolde{
+    position: relative;
+    background-size:cover;
+    background-position: center;
+}
+.plant1s{
+    background-image: url("../images/nos_plantes/4.jpg");
+    
+}
+.plant2s{
+    background-image: url("../images/nos_meilleures_ventes/4.jpg");
+    
+}
+.plant3s{
+    background-image: url("../images/nos_meilleures_ventes/1.jpg");
+
+}
+.plant4s{
+    background-image: url("../images/nos_plantes/6.jpg");
+
+}
+
+/* Filtres */
+.filtre{
+    display:flex;
+    align-items: center;
+}
+.margfiltre{
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+}
+.margfiltretitre{
+    margin-right: 20px;
+}
+.filtre1{
+    display: flex; 
+    list-style: none;
+    justify-content: space-between;
+    width: 100px;
+    margin-left:30px;
+    border-radius: 0 25px 25px 0;
+    position: center;
+}
+.filtre1 a :hover{
+    color: red;
+}
+.filtre1 a{
+    text-decoration: none;
+    color: green;
+}
+/* responsive */
+@media (max-width: 1150px) {
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .burger-container {
+        width: 35px;
+        height: 30px;
+        position: relative;
+    }
+
+    .burger {
+        display: block;
+        height: 3px;
+        width: 30px;
+        background: green;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: background 0.4s;
+    }
+
+    .burger-container.active .burger {
+        background: transparent;
+    }
+
+    .burger::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: green;
+        bottom: 8px;
+        transition: transform 0.4s,
+            bottom 0.4s,
+            background 0.4s;
+    }
+
+    .burger-container.active .burger::before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        background: yellow;
+    }
+
+    .burger::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: green;
+        top: 8px;
+        transition: transform 0.4s,
+            top 0.4s background 0.4s;
+    }
+
+    .burger-container.active .burger::after {
+        top: 0;
+        transform: rotate(45deg);
+        background: green;
+    }
+
+    nav.nav {
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        background: white;
+        left: 0;
+        top: -50vh;
+        transition: top 0.4s ease-in-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 0 50px;
+    }
+
+    nav.nav.active {
+        top: 0;
+    }
+
+    nav.nav li {
+        margin: 0;
+    }
+
+    nav.nav a {
+        color: yellow;
+        font-size: 30px;
+    } 
+
+    .services {
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    .services div {
+        margin: 30px;
+    }
+
+    .plant-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .plant-box {
+        flex: 1;
+        min-width: 350px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    .landing-page,
+    .header,
+    .best-items,
+    .all-plants,
+    .footer {
+        padding: 0 7%;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .big-title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    nav.nav a {
+        font-size: 20px;
+    } 
+
+    .section-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .plant-box {
+        min-width: 300px;
+    }
+
+    .plant-name,
+    .plant-box::before {
+        font-size: 20px;
+    }
+
+    .plant-price {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .footer {
+        justify-content: center;
+    }
+}
+
+/* @media (max-width: 800px){
+    nav .nav{
+        flex-direction: column;
+        height: auto;
+    }
+    nav .nav li{
+        height: 50px;
+    }
+
+} */
+
+/* pied de page */
+footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px 100px;
+    font-weight: 600;
+
+}
+footer a.cgv{
+    text-decoration: none;
+    color:black;
+
+}
